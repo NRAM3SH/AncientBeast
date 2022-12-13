@@ -1235,10 +1235,11 @@ export class UI {
 			this.game.audioState = 'no audio';
 			this.game.soundsys.stopMusic();
 			this.game.soundsys.setEffectsVolume(this.value);
-		} else if (this.game.audioState = 'no audio')
+		} else if (this.game.audioState = 'no audio') {
 			this.game.audioState = 'full audio';
 			this.game.soundsys.stopMusic();
 			this.game.soundsys.setEffectsVolume(0);
+		}
 	}
 
 	toggleMusicPlayer() {
