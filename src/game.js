@@ -101,7 +101,6 @@ export default class Game {
 			'sounds/mudbath',
 		];
 		this.inputMethod = 'Mouse';
-		this.audioState = 'full audio';
 
 
 		// Gameplay properties
