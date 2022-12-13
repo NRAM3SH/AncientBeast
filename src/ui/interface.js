@@ -1229,16 +1229,16 @@ export class UI {
 	changeAudio() {
 		if (this.game.audioState = 'full audio'){
 			this.game.audioState = 'sfx';
-			this.game.soundsys.playMusic();
+			this.game.soundsys.stopMusic();
 			this.game.soundsys.setEffectsVolume(this.value);
 		} else if (this.game.audioState = 'sfx') {
 			this.game.audioState = 'no audio';
 			this.game.soundsys.stopMusic();
-			this.game.soundsys.setEffectsVolume(this.value);
+			this.game.soundsys.setEffectsVolume(0);
 		} else if (this.game.audioState = 'no audio') {
 			this.game.audioState = 'full audio';
-			this.game.soundsys.stopMusic();
-			this.game.soundsys.setEffectsVolume(0);
+			this.game.soundsys.playMusic();
+			this.game.soundsys.setEffectsVolume(this.value);
 		}
 	}
 
