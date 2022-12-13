@@ -49,6 +49,7 @@ export class UI {
 		this.$activebox = $j('#activebox');
 		this.$scoreboard = $j('#scoreboard');
 		this.active = false;
+		this.audioState = 'full';
 
 		// Last clicked creature in Godlet Printer for the current turn
 		this.lastViewedCreature = '';
@@ -1224,6 +1225,22 @@ export class UI {
 				this.lastViewedCreature = creatureType;
 				this.showCreature(creatureType, this.selectedPlayer, 'grid');
 			});
+	}
+
+	changeAudio() {
+		if (this.audioState == 'full'){
+			this.audioState = 'sfx';
+			this.game.soundsys.stopMusic();
+			this.game.soundsys.setEffectsVolume(this.value);
+		} else if (this.audioState == 'sfx') {
+			this.audioState = 'none';
+			this.game.soundsys.stopMusic();
+			this.game.soundsys.setEffectsVolume(0);
+		} else if (this.audioState == 'none') {
+			this.audioState = 'full';
+			this.game.soundsys.playMusic();
+			this.game.soundsys.setEffectsVolume(this.value);
+		}
 	}
 
 	toggleMusicPlayer() {

@@ -51,7 +51,7 @@ export class Hotkeys {
 		if (event.shiftKey) {
 			this.ui.btnAudio.triggerClick();
 		} else {
-			this.ui.dashopen && this.ui.gridSelectLeft();
+			this.ui.dashopen ? this.ui.gridSelectLeft() : this.ui.changeAudio();
 		}
 	}
 

@@ -102,6 +102,7 @@ export default class Game {
 		];
 		this.inputMethod = 'Mouse';
 
+
 		// Gameplay properties
 		this.firstKill = false;
 		this.freezedInput = false;
