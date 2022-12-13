@@ -103,6 +103,12 @@ export default [
           { id: "pause", url: require("assets/icons/audio/pause.svg") },
           { id: "play", url: require("assets/icons/audio/play.svg") },
           { id: "shuffle", url: require("assets/icons/audio/shuffle.svg") },
+          { id: "full-audio",url: require("assets/icons/audio/full-audio.svg") }, 
+          { id: "no-audio",url: require("assets/icons/audio/no-audio.svg") }, 
+          { id: "only-sfx",url: require("assets/icons/audio/only-sfx.svg") }, 
+
+
+          
         ],
       },
       { id: "audio", url: require("assets/icons/audio.svg") },
